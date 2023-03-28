@@ -11,7 +11,7 @@ subtitle: Welcome! I put anything I feel like yelling into the void here.
 
 ## About Me
 * I'm a Junior at [Cornell](cornell) studying CS and ECE, pursuing a M.Eng in Computer Science.
-* Originally from [Virginia](arizona), and I went to Thomas Jefferson High School for Science and Technology (this is considered a fun fact by some) I live in Ithaca, NY during the school year.
+* Originally from [Virginia](virginia), and I went to Thomas Jefferson High School for Science and Technology (this is considered a fun fact by some) I live in Ithaca, NY during the school year.
 * Some college [projects and experiences](projects). 
 
 ## Hobbies
