@@ -5,7 +5,7 @@ title: Virginia
 ---
 
 ### High School
-* Attended Thomas Jefferson High School for Science and Technology (Go Colonials!)
+* Attended [Thomas Jefferson High School for Science and Technology](https://tjhsst.fcps.edu/) (Go Colonials!)
 * Shoutouts to some Teachers for influencing my growth / being cool individuals:
     * Mr. Adam Foreman - Band Director
     * Mrs. Ilsa Trigoboff - Model United Nations
