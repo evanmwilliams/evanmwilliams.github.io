@@ -4,7 +4,11 @@ title: Cornell
 # subtitle: My College Experience
 ---
 
-### Things I do here
+### Things I do here: 
+* I'm the current president of [Cornell Data Science](https://cornelldata.science) - a project team here at Cornell! 
+![roofs](/assets/img/cds.png)
+
+
 * I'm a member of [Cornell Data Science](https://cornelldata.science) - Former lead and onboarding chair.
 * I used to be a (Head) TA for CS 4780: Intro to ML and Consultant for CS 3110
 * Love to participate in intramural sports. I've done basketball, volleyball (reached semi-finals SP22), flag-football, and soccer. 
