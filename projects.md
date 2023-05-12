@@ -20,4 +20,5 @@ Another big project I've been working on is my compiler for [CS 4120: Introducti
 * We have a full lexer, parser, typechecker, intermediate representation, and x86 assembly generator
 * We also implemented important optimizations such as register allocation, dead code elimination, copy propagation, and function inlining 
 * Our team is implementing the compiler in Rust, notably because it ensures strong performance and works well for compiler development 
-![demo](/assets/demo.mp4)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BCTxvB-6fAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
