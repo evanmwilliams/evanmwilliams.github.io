@@ -15,7 +15,7 @@ I've spent this year working on a [distributed game server](https://github.com/C
 * We implemented the Snake game to test our distributed consensus algorithm. We chose this because it was simple enough to allow us to focus on distributed systems but also complex enough to stress-test our algorithms 
 ![snake](/assets/img/snake.png)
 
-# Compiler
+### Compiler
 Another big project I've been working on is my compiler for [CS 4120: Introduction to Compilers](https://www.cs.cornell.edu/courses/cs4120/2023sp/).
 * We're implementing an end-to-end compiler for an imperative programming language called Eta (modeled off of C and Java)
 * We have a full lexer, parser, typechecker, intermediate representation, and x86 assembly generator
