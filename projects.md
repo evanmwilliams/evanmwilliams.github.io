@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Projects and Experiences
-# subtitle: My College Experience
+subtitle: Check out some of my favorite projects and experiences! 
 ---
 
 <!-- ### Senior Year
@@ -29,3 +29,8 @@ title: Projects and Experiences
 * Started my freshman year at Purdue University as a Computer Engineering Major 
 * Conducted research with Professor Jamie Davis and the [Duality Lab](https://davisjam.github.io/)
 * Joined the Purdue Engineering Student Council 
+
+
+### Junior Year 
+I've spent this year working on a [distributed game server](https://github.com/CornellDataScience/Distributed-Game-Server) built in Rust! 
+* This project taught me many valuable skills, such as Rust programming, asynchronous programming with futures, distributed consensus algorithms such as Raft, and CI/CD with GitHub Actions
