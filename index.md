@@ -17,7 +17,6 @@ Check out my [resume](assets/documents/Resume.pdf)!
 * Some college [projects and experiences](projects). 
 
 ## Hobbies
-* I enjoy stochastic controls and processes.
 * Recently been learning how to lockpick (in completely legal settings and just for entertainment purposes, of course)
 * Trying to go to the gym more often! I also enjoy rockclimbing.
 * I enjoy exploring [rooftops](rooftops).  
