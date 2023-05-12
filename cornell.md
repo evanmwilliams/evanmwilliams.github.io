@@ -6,21 +6,10 @@ title: Cornell
 
 ### Things I do here: 
 * I'm the current president of [Cornell Data Science](https://cornelldata.science) - a project team here at Cornell! 
-![roofs](/assets/img/cds.png)
-
-
-* I'm a member of [Cornell Data Science](https://cornelldata.science) - Former lead and onboarding chair.
-* I used to be a (Head) TA for CS 4780: Intro to ML and Consultant for CS 3110
-* Love to participate in intramural sports. I've done basketball, volleyball (reached semi-finals SP22), flag-football, and soccer. 
-* Also love to take PE classes: Fencing, Badminton, Basketball, Volleyball, Golf
-
-### A Smattering of Thoughts
-* Don't go to class
-    * Depends on the kind of learner: if you're like me, you're falling asleep under most professors and you study pretty well on your own time. I can never follow along as well during in class conversations so it's better to use that time elsewhere either doing almost anything else. This lets you reclaim time in my opinion since most people will need to review the material after class anyways. 
-* Blacklisted Restaurants in Ctown
-    * Oishii Bowl
-    * Dos Amigos
-    * Loumies
-    * Subway (for so many reasons)
-
+![cds](/assets/img/cds.png)
+* Some of my favorite projects have been building a [self-driving car](https://github.com/CornellDataScience/self-driving-car) and a [distributed game server](https://github.com/CornellDataScience/Distributed-Game-Server)
+* I've been a TA for CS 4820: Intro to Algorithms for the past two semesters. You can find some of my review sessions [here](https://www.youtube.com/watch?v=aAEdFvHLD6s)! Next semester, I'll be TA'ing for [ECE 4750: Computer Architecture](https://www.csl.cornell.edu/courses/ece4750/index.html).
+* I've also been doing research with the [Cornell Computer Systems Lab](https://www.csl.cornell.edu/). This semester, I've been working with Dr. Austin Rovinski on the [OpenROAD](https://theopenroadproject.org/) project. Previously, I was working with Professor Adrian Sampson on accelerators for pangenomic queries. 
+* Outside of these, I'm also a brother in the [Kappa Alpha Pi](https://www.cornellkapi.com/) Pre-Law fraternity, a member of the [Cru Christian fellowship](https://www.crucornell.com/), and I help out with [CMUNC](https://www.cmunc.net/), our high-school Model United Nations conference.
+* When I'm not working you can find me rock-climbing, trying out food in Ithaca, or playing Super-Smash Bros with my friends :D 
 
