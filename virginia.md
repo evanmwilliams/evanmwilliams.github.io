@@ -9,4 +9,5 @@ title: Virginia
 * Shoutouts to some Teachers for influencing my growth / being cool individuals:
     * Mr. Adam Foreman - Band Director
     * Mrs. Ilsa Trigoboff - Model United Nations
+* While at TJ, I was heavily involved in TJ Model United Nations and the TJHSST Band Program (I played the saxophone for 7 years)! 
 

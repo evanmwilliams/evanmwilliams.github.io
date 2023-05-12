@@ -15,7 +15,7 @@ Check out my [resume](assets/documents/Resume.pdf)!
 * I'm a Junior at [Cornell](cornell) studying CS and ECE, pursuing a M.Eng in Computer Science.
 * Originally from [Virginia](virginia), and I went to Thomas Jefferson High School for Science and Technology (this is considered a fun fact by some) I live in Ithaca, NY during the school year.
 * Check out my college [projects and experiences](projects)! 
-* I also have an advice page for future/current Cornell students. 
+* I also have an [advice](advice) page for future/current Cornell students. 
 
 ## Hobbies
 * Recently been learning how to lockpick (in completely legal settings and just for entertainment purposes, of course)
