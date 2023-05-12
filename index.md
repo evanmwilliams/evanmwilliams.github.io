@@ -5,9 +5,11 @@ subtitle: Welcome to my personal and professional portfolio!
 ---
 ## Resume
 
-<h3 align="center">
+<!-- <h3 align="center">
   <a href='assets/documents/Resume.pdf'>resume</a>
-</h3>
+</h3> -->
+
+Check out my [resume](assets/documents/Resume.pdf)!
 
 ## About Me
 * I'm a Junior at [Cornell](cornell) studying CS and ECE, pursuing a M.Eng in Computer Science.
