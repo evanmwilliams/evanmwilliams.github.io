@@ -2,33 +2,31 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: SDE @ AWS | Cornell CS & ECE '24
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: evan-williams-2024.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>555 Mountain View, CA</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hello! I'm Evan and I'm a software developer at AWS working on [AWS HealthOmics](https://aws.amazon.com/healthomics/). I graduated from Cornell in 2024 with an MEng in CS and a BS in CS and ECE. As an undergrad I worked with [Adrian Sampson](https://www.cs.cornell.edu/~asampson/) on compilers for hardware accelerators. I also TA'd for CS courses and was heavily involved in [Cornell Data Science](https://cornelldata.science/), a student-run project team on campus. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I'm broadly interested in hardware/software co-design at the intersection of compilers, programming languages, and computer architecture. I like thinking about abstractions up-and-down the computing stack and how we can improve them to simplify today's most challenging problems. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I'm always happy to chat! Feel free to reach out at evanw0405@gmail.com. 
