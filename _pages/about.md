@@ -9,7 +9,8 @@ profile:
   image: evan-williams-2024.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 Mountain View, CA</p>
+    <p>Currently in Mountain View, CA</p>
+    <p>From Chantilly, VA</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
