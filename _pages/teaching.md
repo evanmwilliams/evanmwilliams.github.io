@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: courses I've TA'd for or developed
 nav: true
-nav_order: 4
+nav_order: 3
 ---
 
 ## teaching assistant 
