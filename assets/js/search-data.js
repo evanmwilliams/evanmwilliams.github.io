@@ -398,16 +398,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-graduated-from-cornell-cis-with-an-meng-in-computer-science",
+          title: 'Graduated from Cornell CIS with an MEng in Computer Science!',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-started-working-at-aws-in-santa-clara-ca",
+          title: 'Started working at AWS in Santa Clara, CA!',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-selected-for-the-2025-nsf-computer-and-information-science-and-engineering-graduate-fellowship-and-mentoring-program-csgrad4us",
+          title: 'Selected for the 2025 NSF Computer and Information Science and Engineering Graduate Fellowship...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
