@@ -11,7 +11,7 @@ category: academic
 
 For this project, we built a high-performance Mandelbrot set generator and visualization pipeline using **Serial C++**, **OpenMP**, and **UPC++**, and evaluated our implementations on **Perlmutter**, a DOE supercomputer. The goal was to explore how different shared-memory and PGAS programming models handle an “embarrassingly parallel” computation—pixel-wise iteration of the Mandelbrot recurrence—and a more coordination-heavy stage: **histogram coloring**.
 
-![wack-mandelbrot](../assets/img/mandelbrot-colored.jpg)
+![wack-mandelbrot](assets/img/mandelbrot-colored.jpg)
 
 Our pipeline consists of two major components:
 
