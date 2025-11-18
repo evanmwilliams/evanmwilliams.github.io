@@ -1,80 +1,29 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: visualizing the mandelbrot set 
+description: experiments with high performance computing and visualizations of the mandelbrot set 
+img: assets/img/mandelbrot.jpg
+importance: 6
+category: academic
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Parallel Mandelbrot Set Generation
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+For this project, we built a high-performance Mandelbrot set generator and visualization pipeline using **Serial C++**, **OpenMP**, and **UPC++**, and evaluated our implementations on **Perlmutter**, a DOE supercomputer. The goal was to explore how different shared-memory and PGAS programming models handle an “embarrassingly parallel” computation—pixel-wise iteration of the Mandelbrot recurrence—and a more coordination-heavy stage: **histogram coloring**.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+![wack-mandelbrot](../assets/img/mandelbrot-colored.jpg)
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Our pipeline consists of two major components:
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+- **Escape-time computation:** For every pixel in the output image, we compute how many iterations of \( z \leftarrow z^2 + c \) are required before the magnitude exceeds 2. This stage parallelizes perfectly, since each pixel is fully independent.
+- **Histogram coloring:** A multi-pass algorithm that builds a global histogram of iteration counts, prefixes it, and maps each pixel’s iteration depth to a normalized hue. Unlike escape-time computation, histogram coloring requires aggregation across the full image, making parallelization significantly less trivial.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+We implemented and compared three variants:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- **Serial C++:** A baseline implementation of the escape-time algorithm and histogram coloring.
+- **OpenMP:** Multithreaded parallelization of both the escape-time loop and the histogram passes. The embarrassingly-parallel first phase scales extremely well, while global reductions in histogram coloring introduce some synchronization cost.
+- **UPC++:** A distributed PGAS version that partitions work across ranks and uses futures, reductions, and RPCs to aggregate histogram data. Despite communication overhead, UPC++ achieves the **fastest runtimes overall**, though it does not scale strongly with additional nodes due to global synchronization requirements.
 
-{% raw %}
+Across all image sizes, OpenMP beats the serial version by up to **5×**, while UPC++ delivers the strongest absolute performance. The project highlights the trade-offs between shared-memory vs. PGAS programming models, especially when global reductions limit scalability.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+**Source Code:**: https://github.com/evanmwilliams/mandelbrot

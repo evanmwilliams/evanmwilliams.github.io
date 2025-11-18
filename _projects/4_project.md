@@ -1,80 +1,18 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: monte carlo based options pricing with high-level synthesis 
+description: here we demonstrate the ability to accelerate monte carlo options pricing using HLS techniques 
+img: assets/img/fpga.png
+importance: 4
+category: academic 
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+For this project, our team built a hardware accelerator for Monte Carlo–based options pricing using high-level synthesis (HLS) targeting a Xilinx FPGA on a ZedBoard. We implemented a Black–Scholes–style Monte Carlo simulation that estimates European call and put prices by sampling millions of Gaussian random variables and aggregating discounted payoffs.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+On the hardware side, we designed the core simulation in C++ for HLS, then synthesized it to RTL and integrated it with the ARM CPU via the Xillybus streaming interface. A custom Gaussian random number generator based on the polar Box–Muller transform uses two LFSR-based pseudo-random number generators to produce independent samples. The accelerator consumes simulation parameters (spot price, strike, volatility, rate, time to expiry, path count) from the CPU, runs the Monte Carlo kernel entirely on the FPGA, and streams back the estimated call and put prices.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+![montecarlo](../assets/img/montecarlo.svg)
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+To make the design performant on real hardware, we explored a series of HLS optimizations: pipelining the main simulation loop, selectively unrolling inner loops (e.g., in a custom exponential function), aggressive function inlining, and adopting float instead of double to reduce area and latency. We also experimented with dependency removal and partial-sum accumulators to drive the pipeline initiation interval down, trading off resource usage against throughput.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Across the design space, the fully optimized implementation achieved a ~930× speedup over the ARM CPU software baseline and ~225× over the unoptimized FPGA design, at the cost of higher DSP, FF, and LUT utilization—an attractive tradeoff for latency-sensitive financial workloads where speed is paramount.

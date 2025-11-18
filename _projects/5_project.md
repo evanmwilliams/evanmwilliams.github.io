@@ -1,80 +1,25 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: computational complexity of matrix multiplication 
+description: a survey of complexity theory for matrix multiplication 
+img: assets/img/complexity.jpg
+importance: 5
+category: academic
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Survey: Computational Complexity of Matrix Multiplication
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project is a survey of the major ideas behind reducing the computational complexity of matrix multiplication—specifically, the search for the smallest exponent \( \omega \) such that two \( n \times n \) matrices can be multiplied in \( O(n^\omega) \) time. Starting from the classical cubic algorithm, the survey walks through more than fifty years of progress in algebraic complexity theory and tensor-based algorithm design.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+We begin with the foundations of **algebraic circuits**, bilinear maps, and tensor rank, which give a unifying way to express and analyze matrix-multiplication algorithms. The survey then covers the landmark advances:
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+- **Strassen’s Algorithm** – the first breakthrough, reducing \( \omega \) below 3 by expressing \( 2 \times 2 \) multiplication as a rank-7 bilinear algorithm.
+- **Bilinear and Tensor Methods** – framing matrix multiplication as a tensor decomposition problem and using rank/border rank to measure complexity.
+- **Pan, Bini, and Schönhage** – techniques such as trilinear aggregation, border-rank approximations, and the asymptotic sum inequality push \( \omega \) toward 2.5.
+- **Coppersmith–Winograd and the Laser Method** – a transformative approach using structured tensors and degeneration arguments, yielding bounds near \( \omega \approx 2.38 \).
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The survey concludes with modern results, including limitations of the laser method, group-theoretic constructions (Cohn–Umans framework), and recent automated discoveries like **AlphaTensor**, which uses reinforcement learning to uncover new algorithms.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Overall, the write-up provides a concise technical overview of how algebraic insights, tensor decompositions, and asymptotic analysis have driven the best known bounds for matrix multiplication for decades.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+*You can read the full write-up [here](https://courses.cs.cornell.edu/cs6810/2023fa/Matrix.pdf).*

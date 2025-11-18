@@ -1,81 +1,34 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: multi-core risc-v system 
+description: a complete RTL-design of a RISC-V multicore system
+img: assets/img/multicore.jpg
 importance: 2
-category: work
-giscus_comments: true
+category: academic
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Multi-Core RISC-V System
+Over the semester my partner and we completed a sequence of four interconnected lab assignments that collectively guided me from a low-level arithmetic unit to a full single- and multi-core system for our computer architecture course. Each lab built on the previous work, reinforcing hardware-software co-design, modularity, and performance engineering.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### Iterative Integer Multiplier
+In the first lab, we designed two versions of an integer multiplier: a baseline fixed-latency implementation and a variable-latency variant that dynamically exploits operand structure. we implemented both in Verilog (following the datapath/control split) and verified correctness via a testing harness. With directed tests and simulation we evaluated performance differences between the implementations. This lab introduced me to RTL modeling, val/rdy streaming interfaces, and modular design of arithmetic units. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+![multiplier](../assets/img/mult.jpg)
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+### Pipelined Processor
+In the second lab we built from my multiplier to implement two five-stage pipelined processor microarchitectures for the TinyRV2 subset: a stalling baseline and a bypass-enhanced alternative. we extended the earlier hardware to support instruction fetch, decode, execute, memory and write-back stages; addressed hazards and interfaced with instruction/data memories. we verified ~27 of the 34 TinyRV2 instructions and benchmarked both designs to quantify CPwe and pipeline efficiency. This lab deepened my understanding of ISA-microarchitecture mapping, pipeline hazards, and hardware/software interplay. 
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+![processor](../assets/img/proc.jpg)
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Blocking Cache
+In the third lab we moved into the memory subsystem, designing two cache microarchitectures: a baseline direct-mapped write-back/write-allocate cache and an alternative two-way set-associative variant to reduce conflict misses. we decomposed datapath and control FSM modules in Verilog, leveraged the val/rdy streaming interface from prior labs, and conducted simulation and evaluation of hit/miss performance. This work emphasized memory-hierarchy design, FSM-based control, and the performance implications of associativity and policy decisions. 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+![cache](../assets/img/cache.jpg)
 
-{% raw %}
+### Single-Core and Multi-Core Systems
+In the final lab we integrated all components: the multiplier, processor, cache(s), and network fabric into full systems. For the baseline we built a single-core system with private instruction and data caches and verified it by running a sorting microbenchmark in C. For the alternative we developed a multi-core system (ring network, banked shared data cache, private instruction caches) with multi-threaded software and measured scalability. This culminating lab reinforced system-level design, hardware/software co-verification, integration testing, and multicore trade-offs in a unified environment. 
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+![multi](../assets/img/multicore.jpg)
 
-{% endraw %}
+## Conclusion
+Across these four labs I progressed from arithmetic units to full systems, developing a robust design mindset: using modular RTL, layering abstraction levels, integrating hardware and software, and critically evaluating performance. This journey reinforced my interest in democratizing accelerator design—translating from individual hardware IPs to composable, scalable systems. The experience also sharpened my ability to reason across the hardware-software boundary, aligning clean abstractions with concrete implementations and performance metrics.
