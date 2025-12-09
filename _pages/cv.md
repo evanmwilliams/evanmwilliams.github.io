@@ -3,7 +3,7 @@ layout: page
 title: "cv"
 permalink: /cv/
 nav: true
-nav_order: 2
+nav_order: 5
 ---
 <meta http-equiv="refresh"
       content="0; url={{ '/assets/pdf/evan-williams-cv.pdf' | relative_url }}">
