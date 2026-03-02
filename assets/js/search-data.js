@@ -420,7 +420,7 @@ ninja.data = [{
           section: "News",},{id: "news-i-presented-our-work-on-compiling-pytorch-models-to-calyx-at-accml-at-hipeac-2026",
           title: 'I presented our work on compiling PyTorch models to Calyx at AccML at...',
           description: "",
-          section: "News",},{id: "news-our-work-on-using-programming-by-navigation-for-compiler-scheduling-in-fuseflow-is-accepted-to-latte-https-capra-cs-cornell-edu-latte26",
+          section: "News",},{id: "news-our-work-on-using-programming-by-navigation-for-compiler-scheduling-in-fuseflow-is-accepted-to-latte",
           title: 'Our work on using programming by navigation for compiler scheduling in FuseFlow is...',
           description: "",
           section: "News",},{id: "projects-eta-compiler",
