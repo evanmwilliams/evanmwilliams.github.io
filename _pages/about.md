@@ -30,4 +30,4 @@ Hello! I'm Evan and I'm a software developer at AWS working on [AWS HealthOmics]
 
 I'm broadly interested in hardware/software co-design at the intersection of compilers, programming languages, and computer architecture. Recently, I've thinking about how to use [program synthesis](https://dl.acm.org/doi/10.1145/3729264) to interactively create schedules for the [FuseFlow compiler](https://arxiv.org/abs/2511.04768).
 
-I'm always happy to chat! Feel free to reach out at evanw0405@gmail.com. 
+I'm always happy to chat! Feel free to reach out at evanwilliams@cmu.edu. 
