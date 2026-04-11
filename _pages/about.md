@@ -2,15 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: SDE @ AWS | Cornell CS & ECE '24
+subtitle: Incoming ECE PhD Student @ CMU 
 
 profile:
   align: right
   image: evan-williams-2024.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Currently in Mountain View, CA</p>
-    <p>From Chantilly, VA</p>
+    <p>Pittsburgh, PA</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -26,8 +25,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello! I'm Evan and I'm a software developer at AWS working on [AWS HealthOmics](https://aws.amazon.com/healthomics/). I graduated from Cornell in 2024 with an MEng in CS and a BS in CS and ECE. As an undergrad I worked with [Adrian Sampson](https://www.cs.cornell.edu/~asampson/) on compilers for hardware accelerators. I also TA'd for CS courses and was president of [Cornell Data Science](https://cornelldata.science/), a student-run project team on campus. 
+Hello! I'm Evan and I'm an incoming ECE PhD student at Carnegie Mellon University starting Fall 2026. Broadly, my research interests lie in hardware/software co-design at the intersection of compilers, computer architecture, and programming languages. 
 
-I'm broadly interested in hardware/software co-design at the intersection of compilers, programming languages, and computer architecture. Recently, I've thinking about how to use [program synthesis](https://dl.acm.org/doi/10.1145/3729264) to interactively create schedules for the [FuseFlow compiler](https://arxiv.org/abs/2511.04768).
+Previously, I spent two years as a software developer at AWS working on [AWS HealthOmics](https://aws.amazon.com/healthomics/). I graduated from Cornell in 2024 with an MEng in CS and a BS in CS and ECE, where I worked with [Adrian Sampson](https://www.cs.cornell.edu/~asampson/) on compilers for hardware accelerators. 
 
 I'm always happy to chat! Feel free to reach out at evanwilliams@cmu.edu. 
