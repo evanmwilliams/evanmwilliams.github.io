@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: some memorable projects from university and beyond.
-nav: true
+nav: false
 nav_order: 4
 display_categories: [academic, personal]
 horizontal: false
