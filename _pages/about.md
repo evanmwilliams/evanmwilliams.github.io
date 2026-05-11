@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming ECE PhD Student @ CMU 
+subtitle: ECE PhD Student @ CMU 
 
 profile:
   align: right
