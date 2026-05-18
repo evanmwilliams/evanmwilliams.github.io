@@ -27,6 +27,6 @@ latest_posts:
 
 Hello! I'm Evan and I'm an ECE PhD student at Carnegie Mellon University. I'm fortunate to be supported by the [NSF CSGrad4US Fellowship](https://cra.org/csgrad4us/). Broadly, my research interests lie in hardware/software co-design at the intersection of compilers, computer architecture, and programming languages. 
 
-Previously, I spent two years as a software developer at AWS working on [AWS HealthOmics](https://aws.amazon.com/healthomics/). I graduated from Cornell in 2024 with an MEng in CS and a BS in CS and ECE, where I worked with [Adrian Sampson](https://www.cs.cornell.edu/~asampson/) on compilers for hardware accelerators. 
+Previously, I spent two years as a software developer at AWS working on [AWS HealthOmics](https://aws.amazon.com/healthomics/). I graduated from Cornell University in 2024 with an MEng in CS and a BS in CS and ECE, where I worked with [Adrian Sampson](https://www.cs.cornell.edu/~asampson/) on compilers for hardware accelerators. 
 
 I'm always happy to chat! Feel free to reach out at evanwilliams@cmu.edu. 
