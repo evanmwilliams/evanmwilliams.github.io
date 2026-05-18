@@ -3,8 +3,8 @@ layout: page
 permalink: /teaching/
 title: teaching
 description: courses I've TA'd for or developed
-nav: true
-nav_order: 3
+nav: false
+nav_order: 5
 ---
 
 ## teaching assistant 
