@@ -779,17 +779,24 @@ footer.sticky-bottom {
 
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: inherit;
+          border-bottom: none;
 
           &:hover {
-            border-bottom-style: solid;
+            color: inherit;
+            border-bottom: 1px solid;
             text-decoration: none;
           }
         }
 
+        > em,
+        > a > em {
+          font-style: normal;
+          font-weight: bold;
+        }
+
         > em {
           border-bottom: 1px solid;
-          font-style: normal;
         }
 
         > span.more-authors {
