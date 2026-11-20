@@ -6,7 +6,7 @@ subtitle: ECE PhD Student @ CMU
 
 profile:
   align: right
-  image: evan-williams-2024.JPG
+  # image: evan-williams-2024.JPG  # temporarily hidden; uncomment to restore
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Pittsburgh, PA</p>
